@@ -9,6 +9,7 @@ public class GameState : MonoBehaviour
     public Tile TetriminoTile;
     public Tile UiBlackTile;
     public Tile UiRedTile;
+    public GameObject StaticTetriminoPrefab;
     public GameObject TetriminoPrefab;
     public GameObject MiniMinoPrefab;
     public GameObject MainGrid;
@@ -44,9 +45,9 @@ public class GameState : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        NextNext = Instantiate(TetriminoPrefab).GetComponent<Tetrimino>();
+        NextNext = Instantiate(StaticTetriminoPrefab).GetComponent<Tetrimino>();
         MoveUp();
-        NextNext = Instantiate(TetriminoPrefab).GetComponent<Tetrimino>();
+        NextNext = Instantiate(StaticTetriminoPrefab).GetComponent<Tetrimino>();
 
         PointsText.text = "0";
         LinesText.text = "0";
@@ -65,7 +66,7 @@ public class GameState : MonoBehaviour
         Current = Next;
         Current.transform.position = new Vector3(-0.5f, 4);
         MoveUp();
-        NextNext = Instantiate(TetriminoPrefab).GetComponent<Tetrimino>();
+        NextNext = Instantiate(StaticTetriminoPrefab).GetComponent<Tetrimino>();
     }
 
     int CheckLines()

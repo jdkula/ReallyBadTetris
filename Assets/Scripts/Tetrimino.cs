@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
@@ -16,11 +13,15 @@ public class Tetrimino : MonoBehaviour
 
     private Vector3[] _raycastPositionOffsets = new Vector3[3];
 
+    protected virtual bool ShouldCorrectPosition()
+    {
+        return true;
+    }
+
 
     // Use this for initialization
     void Awake()
     {
-        
         _tm = GetComponentInChildren<Tilemap>();
 
         _raycastPositionOffsets[0] = Constants.InvalidTetriminoOffset;
@@ -79,6 +80,25 @@ public class Tetrimino : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if (ShouldCorrectPosition())
+        {
+            while (transform.position.x < MinCoord)
+            {
+                ForceMove(Vector3.right);
+            }
+            while (transform.position.x > MaxCoord)
+            {
+                ForceMove(Vector3.left);
+            }
+            while (WillCollide(Vector3.down))
+            {
+                ForceMove(Vector3.up);
+            }
+        }
+    }
+
     private void UpdateOffsets(int x, int y)
     {
         if (x == 0)
@@ -104,7 +124,17 @@ public class Tetrimino : MonoBehaviour
     
     public bool Move(Vector3 direction)
     {
-        bool collided = false;
+        bool collided = WillCollide(direction);
+        
+        if (!collided)
+        {
+            ForceMove(direction);
+        }
+        return collided;
+    }
+
+    private bool WillCollide(Vector3 direction)
+    {
         foreach(Vector3 raycastOffset in _raycastPositionOffsets)
         {
             if (raycastOffset != Constants.InvalidTetriminoOffset)
@@ -114,16 +144,12 @@ public class Tetrimino : MonoBehaviour
                 Debug.DrawRay(raycastPosition, direction, Color.green, 1);
                 if (rh2D.collider != null)
                 {
-                    collided = true;
+                    return true;
                 }
             }
         }
-        
-        if (!collided)
-        {
-            ForceMove(direction);
-        }
-        return collided;
+
+        return false;
     }
 
     public bool NextRow()

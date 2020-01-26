@@ -2250,8 +2250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tetriminoTile: {fileID: 11400000, guid: 08c79755f364daa43993dd7ad1f01852, type: 2}
-  uiBlackTile: {fileID: 11400000, guid: c873ee406277eff4aacea4e25c34dd00, type: 2}
-  uiRedTile: {fileID: 11400000, guid: 70db4fda1902e8146a7934740b99620d, type: 2}
   staticTetriminoPrefab: {fileID: 1341431074102120, guid: 98e688bd60ab3d246a15e9e8b932bc44,
     type: 3}
   tetriminoPrefab: {fileID: 1341431074102120, guid: 14e2e8042c62d68438c479b102e10e9b,
@@ -2259,12 +2257,10 @@ MonoBehaviour:
   miniMinoPrefab: {fileID: 1613900644597142, guid: e8b8053dc19b0ec4caccdd90e6013efd,
     type: 3}
   mainGrid: {fileID: 97017996}
-  current: {fileID: 0}
-  next: {fileID: 0}
-  nextNext: {fileID: 0}
   pointsText: {fileID: 705967250}
   linesText: {fileID: 164361218}
   highScoreText: {fileID: 973888633}
+  nextOffset: {x: 0, y: 3.5, z: 0}
 --- !u!4 &2005163994
 Transform:
   m_ObjectHideFlags: 0

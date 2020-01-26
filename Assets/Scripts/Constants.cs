@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Constants
+public static class Constants
 {
     public static readonly string SavePath = Application.persistentDataPath + "/save.rbt";
     public const float TimePerRow = 1.0f;

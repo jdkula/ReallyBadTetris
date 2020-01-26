@@ -1,6 +1,10 @@
 ﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
+/// <summary>
+/// Represents the game's save state.
+/// Currently, just the high score.
+/// </summary>
 [System.Serializable]
 public class SaveGame
 {
@@ -8,7 +12,7 @@ public class SaveGame
 
     public int HighScore
     {
-        get { return _highScore; }
+        get => _highScore;
         set { if(_highScore < value) _highScore = value; }
     }
 

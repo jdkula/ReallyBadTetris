@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\jonak\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_ReallyBadTetris.-2091541221.00" t="ExcludeRecursive" />
-    <e p="C:\Users\jonak\Unity\ReallyBadTetris" t="IncludeRecursive">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -17,21 +16,19 @@
           <e p="Constants.cs" t="Include" />
           <e p="GameState.cs" t="Include" />
           <e p="LoseTrigger.cs" t="Include" />
-          <e p="MiniMinoTileMap.cs" t="Include" />
           <e p="SaveGame.cs" t="Include" />
           <e p="StaticTetrimino.cs" t="Include" />
           <e p="Tetrimino.cs" t="Include" />
           <e p="Utility.cs" t="Include" />
         </e>
       </e>
-      <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="ReallyBadTetris.sln" t="IncludeFlat" />
-      <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-      </e>
+      <e p="Temp/bin" t="ExcludeRecursive" />
     </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_ReallyBadTetris.-351255394.00" t="ExcludeRecursive" />
   </component>
   <component name="RiderRiderContentModelStore">
     <excludedPaths>

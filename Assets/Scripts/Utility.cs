@@ -1,4 +1,8 @@
-﻿public class Utility
+﻿/// <summary>
+/// Provides utility methods used throughout
+/// our code to accomplish tasks like rotation.
+/// </summary>
+public static class Utility
 {
     public static bool[,] Transpose(bool[,] source)
     {
